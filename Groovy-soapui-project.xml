@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Groovy" resourceRoot="" soapui-version="5.1.2" abortOnError="false" runType="SEQUENTIAL" id="132b0717-12ab-4ec0-84dc-ed645b89b410" updated="2.1.0 20170726-1100" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite name="GTestSuite" id="7d944e8e-c426-4b18-aff6-d50c7f0ab3e6"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true" id="469ed2b7-4e43-48e1-a534-c68f2c73bf41"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="1bef53ce-cfa9-428f-9ee6-5f593328a33a"><con:settings/><con:config><script>//Grovy scripts //print somthing log.info "getandlearn.com"  //declare variable  def Name = "RANADHEER" def Websites = 51 assert Websites==51 log.info Name log.info Websites  log.info "Total number of Websites are " + Websites  log.info "Total number of Websites are $Websites"   if (Websites==51) { 	log.info "success" 	} else { 	log.info "not success" 	}  for (def i=0;i&lt;10;i++) { 	log.info i 	}  def k=1 while (k&lt;5) { log.info k k++	 }  def abc=new String[5] abc[0]="get" abc[1]="and" abc[2]="learn" abc[3]="dot" abc[4]="com"  log.info abc.size() for( def j=0;j&lt;5;j++) { log.info abc[j] }       </script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script2" id="06d8bbd8-c77c-49e6-8c6b-59ed7c48c755"><con:settings/><con:config><script> //Array List
+
+ def words = ["get","and","learn","dot","come"]
+
+ log.info words[1]
+
+ for (def i=0;i&lt;5;i++)
+ {
+
+log.info words[i]
+  	
+}
+
+
+ArrayList ar= new ArrayList()
+
+//adding iinto array list	
+ar.add("Rano")
+ar.add("Dhannu")
+ar.add("goud")
+ar.add("Poojari")
+
+//get the list
+
+log.info ar.get(1)
+
+log.info ar.size()
+
+
+Hashtable ht=  new Hashtable()
+
+ht.put("Name","Ranadheer")
+ht.put("Nick","Dhannu")
+
+log.info ht.get("Nick")
+
+//Hashmap
+
+def na=["name":"dhannu","number":"phone number","area":"local"]
+
+log.info na["number"]
+
+//List 
+
+def courses=[1,2,3,4,5]
+
+log.info courses[2]
+
+
+
+</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="c18052fc-91b7-4fe7-b99d-f124385d44e9"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:testStep><con:testStep type="groovy" name="Groovy Script3" id="3f9fcdff-4739-49f8-8ec4-36d8279cfda2"><con:settings/><con:config><script>log.info testRunner.testCase.name
+log.info testRunner.testCase.testSuite.name
+log.info testRunner.testCase.testSuite.project.name
+
+log.info testRunner.testCase.testSuite.project.workspace.name
+
+log.info testRunner.testCase.testSuite.project.getTestSuiteByName('Test 2').getTestCaseByName('TestCase 1').name
+
+def testsuitemap= testRunner.testCase.testSuite.project.testSuites
+
+testsuitemap.each{
+	
+	tsEntry ->
+	log.info tsEntry.key
+	
+	}</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script4" id="a5e79986-ab2a-41ad-8515-54f0994218a2"><con:settings/><con:config><script>def testStepName='dhannu '
+
+def testStep= testRunner.testCase.getTestStepByName(testStepName)
+
+log.info testStep</script></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="8e4afa52-5580-4c3e-9854-68d7e0c884dc" name="Test 2"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6da81344-303e-4003-87b3-d22b86b1f115" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="a285f18a-3ee6-4fb1-b983-8063172c91f8"><con:settings/><con:config><script/></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:authRepository/><con:tags/><con:sensitiveInformation/></con:soapui-project>
